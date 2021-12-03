@@ -16,6 +16,12 @@ def input_as_ints(filename:str) -> List[int]:
     line_as_int = lambda l: int(l.rstrip('\n'))
     return list(map(line_as_int, lines))
 
+def input_as_separatedBits(filename:str) -> List[ List[int]]:
+    """Return a list where each line in the input file is an element of the list, converted into a list of bits as integer"""
+    lines = input_as_lines(filename)
+    line_as_listofBits = lambda l: [int(char) for char in list(l.rstrip('\n'))]
+    return list(map(line_as_listofBits, lines))
+
 def rotate_list( vList:List, vValue:int) -> List:
     """Return a list shifted by N positions"""
     items = deque(vList)

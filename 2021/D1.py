@@ -1,14 +1,14 @@
 import myLib
 
 DAY       = "D1"
-inputFile = "D:\Dev_Perso\\adventofcode.com\\2021\\"+DAY+".txt"
+inputFile = "D:\Dev_Perso\\AdventOfCode\\2021\\"+DAY+".txt"
 
 # --------------------------------------------------------------------------------------------------
 
 def resolve( measures: list):
     res=0
     for (a,b) in zip( measures[1:], measures):
-        if (a>b): res=res+1
+        if (a>b): res+=1
     return res
 
 

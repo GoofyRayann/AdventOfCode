@@ -1,7 +1,7 @@
 import myLib
 
 DAY       = "D2"
-inputFile = "D:\Dev_Perso\\adventofcode.com\\2021\\"+DAY+".txt"
+inputFile = "D:\Dev_Perso\\AdventOfCode\\2021\\"+DAY+".txt"
 
 # --------------------------------------------------------------------------------------------------
 
