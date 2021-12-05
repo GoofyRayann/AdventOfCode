@@ -1,4 +1,5 @@
 import myLib
+import matplotlib.pyplot as plt
 
 DAY       = "D2"
 inputFile = "D:\Dev_Perso\\AdventOfCode\\2021\\"+DAY+".txt"
@@ -27,31 +28,37 @@ def Puzzle_1b( inputFile ):
 
     return sumForward * ( sumDown - sumUp )
 
-def Puzzle_2(inputFile):
+def Puzzle_2(inputFile, graph):
+    graph.axis('on')
     posAim        = 0
     posHorizontal = 0
     posDepth      = 0
     rules         = {"forward": (1, 0, 1), "up": (0, -1, 0), "down": (0, 1, 0)} # -> action : ( affectH, affectA, affectD )
 
     for line in myLib.input_as_lines(inputFile):
+        x,y            = posHorizontal, posDepth
         command,value  = line.split(' ')
         rule           = rules[command]
         posAim        += rule[1] * int(value)
         posHorizontal += rule[0] * int(value)
         posDepth      += rule[2] * int(value) * posAim
 
+        graph.plot([x,posHorizontal], [-y,-posDepth], linewidth=0.5, color=(0, 0, 0))
+        print(posHorizontal,posDepth  )
+
     return posHorizontal * posDepth
 
 # --------------------------------------------------------------------------------------------------
 
+figure,graph = myLib.init_matlibgraph(DAY)
+
 myLib.display_header(DAY, inputFile )
 
 myLib.display_result("1a",str(Puzzle_1a( inputFile )))
-
 myLib.display_result("1b",str(Puzzle_1b( inputFile )))
-
-myLib.display_result("2 ",str(Puzzle_2( inputFile )))
+myLib.display_result("2 ",str(Puzzle_2( inputFile, graph[1] ) ,))
 
 myLib.display_footer()
 
+myLib.save_matlibgraph(figure, DAY)
 

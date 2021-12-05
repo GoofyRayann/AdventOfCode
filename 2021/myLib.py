@@ -1,5 +1,6 @@
 from typing import List
 from collections import deque
+import matplotlib.pyplot as plt
 
 def input_as_string(filename:str) -> str:
     """returns the content of the input file as a string"""
@@ -42,5 +43,15 @@ def display_footer():
     print("------------------------------------------------------------------------------------------")
     return
 
+def init_matlibgraph(day:str):
+    figure, graph = plt.subplots(1, 2)
+    graph[0].title.set_text(day + " puzzle 1")
+    graph[0].axis('off')
+    graph[1].title.set_text(day + " puzzle 2")
+    graph[1].axis('off')
+    return(figure, graph)
 
+def save_matlibgraph(figure, day:str):
+    figure.tight_layout()
+    figure.savefig(day + '.png',dpi=300)
 
