@@ -25,8 +25,8 @@ def Puzzle_2_computeBitCritera( values:list[list[int]] , bitCriteria : int):
         nbValues   = len(values)
         sumBit     = sum([bits[i] for bits in values])
         choosenBit = bitCriteria if sumBit >= nbValues / 2 else (bitCriteria+1)%2
-
         filterList = [bits for bits in values if bits[i] == choosenBit]
+
         values     = filterList
         if len(values) <= 1: break
 
