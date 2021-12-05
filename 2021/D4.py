@@ -12,7 +12,7 @@ def readBingos(inputFile):
 
     #-> GET DRAWN NUMBERS
 
-    drawnNumbers  = [ int(n) for n in lines[0].split(',')]
+    drawnNumbers  = [ int(n) for n in lines[0].split(',')] #list(map(int, lines[0].split(",")))
 
     #-> GET ALL BOARDS IN BOARDS [noBoard] [noLine] [noColumn] = value
 
