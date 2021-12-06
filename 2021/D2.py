@@ -44,7 +44,6 @@ def Puzzle_2(inputFile, graph):
         posDepth      += rule[2] * int(value) * posAim
 
         graph.plot([x,posHorizontal], [-y,-posDepth], linewidth=0.5, color=(0, 0, 0))
-        print(posHorizontal,posDepth  )
 
     return posHorizontal * posDepth
 

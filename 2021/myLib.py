@@ -17,6 +17,11 @@ def input_as_ints(filename:str) -> List[int]:
     line_as_int = lambda l: int(l.rstrip('\n'))
     return list(map(line_as_int, lines))
 
+def input_as_list_of_ints(filename:str) -> List[int]:
+    """Return a list where each line in the input file is converted into a list onf integers """
+    lines = input_as_lines(filename)
+    return [ [ int(value) for value in line.rstrip('\n').split(',')] for line in lines]
+
 def input_as_separatedBits(filename:str) -> List[ List[int]]:
     """Return a list where each line in the input file is an element of the list, converted into a list of bits as integer"""
     lines = input_as_lines(filename)
