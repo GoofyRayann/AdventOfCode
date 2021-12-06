@@ -6,16 +6,20 @@ inputFile = "D:\Dev_Perso\\AdventOfCode\\2021\\"+DAY+".txt"
 
 # --------------------------------------------------------------------------------------------------
 
-def Puzzle_1a( inputFile ):
+def Puzzle_1a( inputFile , graph ):
+    graph.axis('on')
     posHorizontal = 0
     posDepth      = 0
     rules         = { "forward" : (1,0), "up" : (0,-1), "down" : (0,1)}  #-> action : ( affectH, affectD )
 
     for line in myLib.input_as_lines(inputFile):
+        x, y           = posHorizontal, posDepth
         command        = line.split(' ')
         rule           = rules[command[0]]
         posHorizontal += rule[0] * int(command[1])
         posDepth      += rule[1] * int(command[1])
+
+        graph.plot([x, posHorizontal], [-y, -posDepth], linewidth=0.5, color=(0, 0, 0))
 
     return  posHorizontal * posDepth
 
@@ -53,9 +57,9 @@ figure,graph = myLib.init_matlibgraph(DAY)
 
 myLib.display_header(DAY, inputFile )
 
-myLib.display_result("1a",str(Puzzle_1a( inputFile )))
+myLib.display_result("1a",str(Puzzle_1a( inputFile , graph[0])))
 myLib.display_result("1b",str(Puzzle_1b( inputFile )))
-myLib.display_result("2 ",str(Puzzle_2( inputFile, graph[1] ) ,))
+myLib.display_result("2 ",str(Puzzle_2( inputFile, graph[1] )))
 
 myLib.display_footer()
 

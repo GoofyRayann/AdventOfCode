@@ -1,5 +1,4 @@
 import myLib
-import re
 
 DAY       = "D6"
 inputFile = "D:\Dev_Perso\\AdventOfCode\\2021\\"+DAY+".txt"
