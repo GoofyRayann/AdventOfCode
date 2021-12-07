@@ -1,7 +1,6 @@
 from generativepy.bitmap import Scaler
 from generativepy.nparray import make_nparray_data, save_nparray, load_nparray, make_npcolormap, apply_npcolormap, save_nparray_image
 from generativepy.color import Color
-from generativepy.analytics import print_stats, print_histogram
 import numpy as np
 
 MAX_COUNT = 10000000

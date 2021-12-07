@@ -19,3 +19,4 @@ YEAR/
 | [🎄 Day 4: Giant Squid](https://adventofcode.com/2021/day/4)            | ⭐⭐    | [🎯 Day 4](D4.py)       | 29140 / 30242 |
 | [🎄 Day 5: Hydrothermal Venture](https://adventofcode.com/2021/day/5)            | ⭐⭐    | [🎯 Day 5](D5.py)       | 21532   / 19019  |
 | [🎄 Day 6: Lanternfish](https://adventofcode.com/2021/day/6)            | ⭐⭐    | [🎯 Day 6](D6.py)       | 13690   / 9538   |
+| [🎄 Day 7: The Treachery of Whales](https://adventofcode.com/2021/day/7)            | ⭐⭐    | [🎯 Day 7](D7.py)       |    /    |
