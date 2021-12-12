@@ -6,7 +6,7 @@ inputFile = "D:\Dev_Perso\\AdventOfCode\\2021\\"+DAY+".txt"
 # --------------------------------------------------------------------------------------------------
 
 def Puzzle_1( inputFile ):
-    values    = myLib.input_as_separatedBits(inputFile)
+    values    = myLib.input_as_list_of_list_of_ints(inputFile)
     nbBits    = len(values[0])
     nbValues  = len(values)
     gammaRate , epsilonRate = '', ''
@@ -34,7 +34,7 @@ def Puzzle_2_computeBitCritera( values:list[list[int]] , bitCriteria : int):
 
 
 def Puzzle_2(inputFile):
-    values     = myLib.input_as_separatedBits(inputFile)
+    values     = myLib.input_as_list_of_list_of_ints(inputFile)
     oxygenRate = Puzzle_2_computeBitCritera(values, 1 )
     co2Rate    = Puzzle_2_computeBitCritera(values, 0 )
 

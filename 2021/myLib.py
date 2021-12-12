@@ -29,11 +29,11 @@ def input_as_list_of_ints(filename:str) -> List[int]:
     lines = input_as_lines(filename)
     return [ [ int(value) for value in line.rstrip('\n').split(',')] for line in lines]
 
-def input_as_separatedBits(filename:str) -> List[ List[int]]:
-    """Return a list where each line in the input file is an element of the list, converted into a list of bits as integer"""
+def input_as_list_of_list_of_ints(filename:str) -> List[ List[int]]:
+    """Return a list where each line in the input file is a list of integers"""
     lines = input_as_lines(filename)
-    line_as_listofBits = lambda l: [int(char) for char in list(l.rstrip('\n'))]
-    return list(map(line_as_listofBits, lines))
+    line_as_listofInts = lambda l: [int(char) for char in list(l.rstrip('\n'))]
+    return list(map(line_as_listofInts, lines))
 
 def rotate_list( vList:List, vValue:int) -> List:
     """Return a list shifted by N positions"""
