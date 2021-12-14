@@ -67,13 +67,26 @@ def Puzzle_1( inputFile ):
 
     print( "RES PUZZEL_1 :" ,  len(papers[1][2]) )
 
-    RESULT = [ ['.'] * (papers[step][0]+1) for i in range(0, papers[step][1] +1) ]
+    RESULT = [ [' '] * (papers[step][0]+1) for i in range(0, papers[step][1] +1) ]
     for (x,y) in   papers[step][2]:
         RESULT[y][x] = 'X'
 
     print("RES PUZZEL_2 :" ) #ABKJFBGC
     for line in RESULT:
         print( ''.join( line))
+
+    # ------------------------------------------------------------------------------------------
+    # RES PUZZEL_1: 745
+    # RES PUZZEL_2:
+    #  XX  XXX  X  X   XX XXXX XXX   XX   XX
+    # X  X X  X X X     X X    X  X X  X X  X
+    # X  X XXX  XX      X XXX  XXX  X    X
+    # XXXX X  X X X     X X    X  X X XX X
+    # X  X X  X X X  X  X X    X  X X  X X  X
+    # X  X XXX  X  X  XX  X    XXX   XXX  XX
+    # PUZZLE    1: 0
+    # PUZZLE    2: 0
+    # ------------------------------------------------------------------------------------------
 
     return 0
 

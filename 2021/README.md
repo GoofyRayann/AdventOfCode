@@ -26,3 +26,4 @@ YEAR/
 | [🎄 Day 11: Dumbo Octopus](https://adventofcode.com/2021/day/11)            | ⭐⭐    | [🎯 Day 11](D11.py)       | 37154   / 38981  |
 | [🎄 Day 12: Passage Pathing](https://adventofcode.com/2021/day/12)            | ⭐⭐    | [🎯 Day 12](D12.py)       | SOON   / SOON  |
 | [🎄 Day 13: Transparent Origami](https://adventofcode.com/2021/day/13)            | ⭐⭐    | [🎯 Day 13](D13.py)       | 14635 / 13771     |
+| [🎄 Day 14: Extended Polymerization](https://adventofcode.com/2021/day/14)            | ⭐⭐    | [🎯 Day 14](D14.py)       | 19056 / 21334     |
