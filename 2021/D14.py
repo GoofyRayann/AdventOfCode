@@ -38,7 +38,7 @@ def Puzzle_1( inputFile ):
         print( "Step ", step, "-", ''.join(newTemplate))
 
     #- RESULT A STEP 10
-    print ( "STEP 10: " , [[x, templates[10].count(x)] for x in set(templates[10])] )
+    totaux = { x: templates[10].count(x) for x in set(templates[10]) }
 
     #- NEED TO COMPUTE THE RESULT, I DID IT MANUALY :)
 
@@ -73,6 +73,7 @@ def Puzzle_2(inputFile):
     #- Count the numbers of pairs for each letters
     for step in range(0, 41):
         print( "TOTAUX STEP " , step)
+
         cntElements = defaultdict(int)
         for (element1, element2) in templates[step]:
             cntElements[ element1] += templates[step][(element1, element2)]
