@@ -80,9 +80,9 @@ def save_matlibgraph(figure, day:str):
 #- ------------------------------------------------------------------------------------------------------------------
 
 # def generativePy_colorizeImage( image):
-#     image = np.reshape(image, (image.shape[0], image.shape[1]))
+#     image        = np.reshape(image, (image.shape[0], image.shape[1]))
 #     power_counts = np.power(image, 1.2)
-#     maxcount = np.max(power_counts)
+#     maxcount     = np.max(power_counts)
 #
 #     normalised_counts = (power_counts * 1023 / max(maxcount, 1)).astype(np.uint32)
 #
